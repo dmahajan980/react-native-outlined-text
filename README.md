@@ -1,5 +1,9 @@
 # react-native-outlined-text
-Native text component that enables text outline/stroke in React Native."
+
+> This is a work in progress. Use with caution.
+
+Native text component that enables text outline/stroke in React Native.
+
 ## Installation
 
 ```sh
@@ -9,11 +13,11 @@ npm install react-native-outlined-text
 ## Usage
 
 ```js
-import { OutlinedTextView } from "react-native-outlined-text";
+import { OutlinedTextView } from 'react-native-outlined-text';
 
 // ...
 
-<OutlinedTextView color="tomato" />
+<OutlinedTextView color="tomato" />;
 ```
 
 ## Contributing

@@ -1,15 +1,14 @@
 package com.reactnativeoutlinedtext;
 
 import android.graphics.Color;
-import android.view.View;
-
 import androidx.annotation.NonNull;
 
-import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.annotations.ReactProp;
+import com.facebook.react.views.text.ReactTextView;
+import com.facebook.react.views.text.ReactTextViewManager;
 
-public class OutlinedTextViewManager extends SimpleViewManager<View> {
+public class OutlinedTextViewManager extends ReactTextViewManager {
     public static final String REACT_CLASS = "OutlinedTextView";
 
     @Override
@@ -20,12 +19,17 @@ public class OutlinedTextViewManager extends SimpleViewManager<View> {
 
     @Override
     @NonNull
-    public View createViewInstance(ThemedReactContext reactContext) {
-        return new View(reactContext);
+    public ReactTextView createViewInstance(ThemedReactContext reactContext) {
+        return new OutlinedTextView(reactContext);
     }
 
-    @ReactProp(name = "color")
-    public void setColor(View view, String color) {
-        view.setBackgroundColor(Color.parseColor(color));
+    @ReactProp(name = "outlineColor")
+    public void setOutlineColor(OutlinedTextView outlinedText, String color) {
+        outlinedText.setOutlineColor(Color.parseColor(color));
+    }
+
+    @ReactProp(name = "outlineWidth", defaultFloat = 2f)
+    public void setOutlineWidth(OutlinedTextView outlinedText, float width) {
+      outlinedText.setOutlineWidth(width);
     }
 }

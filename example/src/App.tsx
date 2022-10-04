@@ -6,7 +6,7 @@ import { OutlinedTextView } from 'react-native-outlined-text';
 export default function App() {
   return (
     <View style={styles.container}>
-      <OutlinedTextView color="#32a852" style={styles.box} />
+      <OutlinedTextView outlineColor="#000">Hi</OutlinedTextView>
     </View>
   );
 }

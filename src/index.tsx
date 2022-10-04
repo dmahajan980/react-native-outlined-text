@@ -2,7 +2,8 @@ import {
   requireNativeComponent,
   UIManager,
   Platform,
-  ViewStyle,
+  TextProps,
+  ColorValue,
 } from 'react-native';
 
 const LINKING_ERROR =
@@ -11,10 +12,10 @@ const LINKING_ERROR =
   '- You rebuilt the app after installing the package\n' +
   '- You are not using Expo managed workflow\n';
 
-type OutlinedTextProps = {
-  color: string;
-  style: ViewStyle;
-};
+interface OutlinedTextProps extends TextProps {
+  outlineColor: ColorValue;
+  outlineWidth?: number;
+}
 
 const ComponentName = 'OutlinedTextView';
 
