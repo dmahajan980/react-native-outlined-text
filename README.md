@@ -1,6 +1,6 @@
 # react-native-outlined-text
 
-> **Warning**
+> **Warning**  
 > This is a work in progress. Use with caution.
 
 Native text component that enables text outline/stroke in React Native.
