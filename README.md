@@ -17,8 +17,22 @@ import { OutlinedTextView } from 'react-native-outlined-text';
 
 // ...
 
-<OutlinedTextView color="tomato" />;
+<OutlinedTextView outlineColor="#000000" outlineWidth={5}>
+  This text is outlined
+</OutlinedTextView>;
 ```
+
+## Props
+
+`OutlinedTextView` extends React Native's core [`Text`](https://reactnative.dev/docs/text)
+component and adds two new props to it.
+
+| Prop Name    | Type       | Required | Default Value |
+| ------------ | ---------- | -------- | ------------- |
+| outlineColor | ColorValue | true     | N/A           |
+| outlineWidth | number     | false    | 2             |
+
+All the remaining props are same as [`Text` component props](https://reactnative.dev/docs/text#props).
 
 ## Contributing
 
@@ -26,7 +40,8 @@ See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the 
 
 ## License
 
-MIT
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT) -
+see the [LICENSE file](./LICENSE) for details.
 
 ---
 
